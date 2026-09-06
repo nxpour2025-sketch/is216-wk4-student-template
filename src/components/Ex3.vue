@@ -10,7 +10,7 @@ const login = ref('username')
   <!-- Add/modify code in the following to have a dropdown list 
         which lets the user to select either to login with username or email -->
   <select name="login" v-model="login">
-    <option value="username" selected>Username login</option>
+    <option value="username">Username login</option>
     <option value="email">Email login</option>
   </select>
 
