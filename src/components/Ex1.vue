@@ -12,7 +12,7 @@ const selectedFruit = ref('')
 <template>
   {{ message }}
 
-  <label v-for="fruit in fruits" :key="fruit"> <input type="radio" name="fruit" :value="fruit" v-model="selectedFruit"/> {{ fruit }} </label>
+  <label v-for="fruit in fruits" v-bind:key="fruit"> <input type="radio" name="fruit" v-bind:value="fruit" v-model="selectedFruit"/> {{ fruit }} </label>
 </template>
 
 <style scoped></style>
