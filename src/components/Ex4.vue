@@ -6,13 +6,11 @@ import { ref } from 'vue'
 const id = ref('demo')
 const blueBox = ref(true)
 const blueBtn = ref(true)
-const redBox = ref(false)
-const redBtn1 = ref(false)
 
 // part 2
 const activeColor = ref('red')
 const redBtn = ref(true)
-const blueBtn2 = ref(true)
+const id2 = ref('demo2')
 
 // implement methods below
 // part 1
@@ -20,13 +18,9 @@ function changeColor() {
   if (blueBox.value) {
     blueBox.value = false
     blueBtn.value = false
-    redBox.value = true
-    redBtn1.value = true
   } else {
     blueBox.value = true
     blueBtn.value = true
-    redBox.value = false
-    redBtn1.value = false
   }
 }
 
@@ -35,11 +29,9 @@ function changeTextColor() {
   if (activeColor.value == 'blue') {
     activeColor.value = 'red'
     redBtn.value = true
-    blueBtn2.value = false
   } else {
     activeColor.value = 'blue'
     redBtn.value = false
-    blueBtn2.value = true
   }
 }
 </script>
@@ -49,15 +41,15 @@ function changeTextColor() {
   <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
   <div id="part1">
-    <div v-bind:class="{blueBox, redBox}">div ID : {{ id }}</div>
+    <div v-bind:class="blueBox ? 'blueBox' : 'redBox'">div ID : {{ id }}</div>
 
-    <button type="button" v-on:click="changeColor" v-bind:class="{'btn-primary': blueBtn, 'btn-danger': redBtn1}">Change Color</button>
+    <button type="button" v-on:click="changeColor" v-bind:class="blueBtn ? 'btn-primary' : 'btn-danger'">Change Color</button>
   </div>
 
   <div id="part2">
-    <div v-bind:style="{color: activeColor}">div ID : {{ id }}</div>
+    <div v-bind:style="{color: activeColor}">div ID : {{ id2 }}</div>
 
-    <button type="button" v-on:click="changeTextColor" v-bind:class="{'btn-primary': blueBtn2, 'btn-danger': redBtn}">Change Text Color</button>
+    <button type="button" v-on:click="changeTextColor" v-bind:class="redBtn ? 'btn-danger' : 'btn-primary'">Change Text Color</button>
   </div>
 </template>
 
