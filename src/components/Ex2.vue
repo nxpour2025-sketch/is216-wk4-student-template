@@ -1,12 +1,9 @@
 <script setup>
-    import { ref } from 'vue'
+import { ref } from 'vue'
 
-    // Add code here
-
+// Add code here
 </script>
 
 <template>
-
-    <!-- Add code here -->
-   
+  <!-- Add code here -->
 </template>
