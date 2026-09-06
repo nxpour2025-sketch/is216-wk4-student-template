@@ -7,9 +7,9 @@ const width = ref('600')
 const height = ref('400')
 
 const obj = {
-  src: "/assets/me.png",
+  src: "../assets/wad.png",
   width: 400,
-  height: 200,
+  height: 400,
 }
 </script>
 
