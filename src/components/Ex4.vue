@@ -41,7 +41,7 @@ function changeTextColor() {
   <!-- note: need to use single quotes '' for classes such as btn-primary which contains '-' signs
                 because '-' is a minus operator for (Vue) JavaScript  -->
   <div id="part1">
-    <div v-bind:class="blueBox ? 'blueBox' : 'redBox'">div ID : {{ id }}</div>
+    <div v-bind:class="blueBox ? 'blueBox' : 'redBox'" id="demo">div ID : {{ id }}</div>
 
     <button
       type="button"

@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 
 // Add code here
-const me = ref('/assets/me.png')
-const x = ref('200')
-const y = ref('200')
+const me = ref('/assets/me.png');
+const width = ref('200');
+const height = ref('200');
 
 import wad from '/assets/wad.png'
 const obj = {
@@ -17,7 +17,7 @@ const obj = {
 <template>
   <!-- Add code here -->
   <!--multiple binding-->
-  <img v-bind:src="me" :width="x" :height="y" />
+  <img v-bind:src="me" :width="width" :height="height" />
   <hr />
   <!--single binding-->
   <img v-bind="obj" />
