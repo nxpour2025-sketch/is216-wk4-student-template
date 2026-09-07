@@ -7,7 +7,7 @@ const message = ref('Choose your favorite fruit: ');
 const fruits = ref(['apple', 'orange', 'peach']);
 
 </script>
-
+ 
 <template>
   {{ message }}
 
