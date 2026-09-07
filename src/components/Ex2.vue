@@ -6,9 +6,8 @@ const me = ref('/assets/me.png');
 const width = ref('200');
 const height = ref('200');
 
-import wad from '/assets/wad.png'
 const obj = {
-  src: wad,
+  src: '/assets/wad.png',
   width: 200,
   height: 200,
 }
