@@ -19,6 +19,7 @@ const login = ref('username')
       <label>Username</label>
       <input placeholder="Enter your username" />
     </template>
+    
     <template v-else="login == 'email'">
       <label>Email</label>
       <input placeholder="Enter your email address" />
