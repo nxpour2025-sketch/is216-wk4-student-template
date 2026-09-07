@@ -43,13 +43,25 @@ function changeTextColor() {
   <div id="part1">
     <div v-bind:class="blueBox ? 'blueBox' : 'redBox'">div ID : {{ id }}</div>
 
-    <button type="button" v-on:click="changeColor" v-bind:class="blueBtn ? 'btn-primary' : 'btn-danger'">Change Color</button>
+    <button
+      type="button"
+      v-on:click="changeColor"
+      v-bind:class="blueBtn ? 'btn-primary' : 'btn-danger'"
+    >
+      Change Color
+    </button>
   </div>
 
   <div id="part2">
-    <div v-bind:style="{color: activeColor}">div ID : {{ id2 }}</div>
+    <div v-bind:style="{ color: activeColor }">div ID : {{ id2 }}</div>
 
-    <button type="button" v-on:click="changeTextColor" v-bind:class="redBtn ? 'btn-danger' : 'btn-primary'">Change Text Color</button>
+    <button
+      type="button"
+      v-on:click="changeTextColor"
+      v-bind:class="redBtn ? 'btn-danger' : 'btn-primary'"
+    >
+      Change Text Color
+    </button>
   </div>
 </template>
 
